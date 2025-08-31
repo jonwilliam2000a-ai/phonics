@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Spelling Kingdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff; /* Light blue background */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main Container -->
+    <div class="bg-white p-6 md:p-12 rounded-3xl shadow-2xl max-w-4xl w-full text-center border-4 border-purple-300 transform transition-transform duration-500 ease-in-out hover:scale-105">
+
+        <!-- Header and Title -->
+        <h1 class="text-3xl md:text-5xl font-bold text-purple-700 mb-2">
+            Spelling Adventure! (Grades 1-2) 🏰
+        </h1>
+        <p class="text-lg md:text-xl text-purple-500 mb-8">
+            Choose a menu and a week to start your spelling quest!
+        </p>
+
+        <!-- Dropdown Menus Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Menu 1 -->
+            <div class="flex flex-col items-center">
+                <label for="menu1" class="text-purple-600 font-bold mb-2">Menu 1: Short Vowels</label>
+                <select id="menu1" class="menu-dropdown w-full p-3 rounded-lg bg-yellow-200 text-yellow-800 border-2 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: Words with 'a'</option>
+                    <option value="week2">Week 2: Words with 'e'</option>
+                    <option value="week3">Week 3: Words with 'i'</option>
+                    <option value="week4">Week 4: Words with 'o'</option>
+                    <option value="week5">Week 5: Words with 'u'</option>
+                </select>
+            </div>
+
+            <!-- Menu 2 -->
+            <div class="flex flex-col items-center">
+                <label for="menu2" class="text-purple-600 font-bold mb-2">Menu 2: Long Vowels</label>
+                <select id="menu2" class="menu-dropdown w-full p-3 rounded-lg bg-pink-200 text-pink-800 border-2 border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: Words with 'a_e'</option>
+                    <option value="week2">Week 2: Words with 'ee'</option>
+                    <option value="week3">Week 3: Words with 'i_e'</option>
+                    <option value="week4">Week 4: Words with 'o_e'</option>
+                    <option value="week5">Week 5: Words with 'u_e'</option>
+                </select>
+            </div>
+
+            <!-- Menu 3 -->
+            <div class="flex flex-col items-center">
+                <label for="menu3" class="text-purple-600 font-bold mb-2">Menu 3: Consonants</label>
+                <select id="menu3" class="menu-dropdown w-full p-3 rounded-lg bg-green-200 text-green-800 border-2 border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: Consonant Blends (bl, cl)</option>
+                    <option value="week2">Week 2: Consonant Blends (dr, fr)</option>
+                    <option value="week3">Week 3: Consonant Digraphs (sh, ch)</option>
+                    <option value="week4">Week 4: Consonant Digraphs (th, wh)</option>
+                    <option value="week5">Week 5: Soft 'c' and 'g'</option>
+                </select>
+            </div>
+            
+            <!-- Menu 4 -->
+            <div class="flex flex-col items-center">
+                <label for="menu4" class="text-purple-600 font-bold mb-2">Menu 4: Vowel Teams</label>
+                <select id="menu4" class="menu-dropdown w-full p-3 rounded-lg bg-blue-200 text-blue-800 border-2 border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: Vowel Teams (ai, ay)</option>
+                    <option value="week2">Week 2: Vowel Teams (ea, ee)</option>
+                    <option value="week3">Week 3: Vowel Teams (oa, oe, ow)</option>
+                    <option value="week4">Week 4: Vowel Teams (ou, ow)</option>
+                    <option value="week5">Week 5: Vowel Teams (oi, oy)</option>
+                </select>
+            </div>
+
+            <!-- Menu 5 -->
+            <div class="flex flex-col items-center">
+                <label for="menu5" class="text-purple-600 font-bold mb-2">Menu 5: R-Controlled</label>
+                <select id="menu5" class="menu-dropdown w-full p-3 rounded-lg bg-red-200 text-red-800 border-2 border-red-400 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: 'ar' Words</option>
+                    <option value="week2">Week 2: 'or' Words</option>
+                    <option value="week3">Week 3: 'er' Words</option>
+                    <option value="week4">Week 4: 'ir' Words</option>
+                    <option value="week5">Week 5: 'ur' Words</option>
+                </select>
+            </div>
+
+            <!-- Menu 6 -->
+            <div class="flex flex-col items-center">
+                <label for="menu6" class="text-purple-600 font-bold mb-2">Menu 6: Tricky Words</label>
+                <select id="menu6" class="menu-dropdown w-full p-3 rounded-lg bg-indigo-200 text-indigo-800 border-2 border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="" disabled selected>Choose a week...</option>
+                    <option value="week1">Week 1: Silent 'k' and 'g'</option>
+                    <option value="week2">Week 2: Contractions</option>
+                    <option value="week3">Week 3: Homophones</option>
+                    <option value="week4">Week 4: Plurals</option>
+                    <option value="week5">Week 5: Compound Words</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Spelling Area -->
+        <div id="spelling-area" class="hidden">
+            <div class="bg-gray-100 p-6 rounded-2xl border-2 border-gray-300">
+                <h2 id="word-to-spell" class="text-2xl md:text-3xl font-bold text-gray-800 mb-4"></h2>
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                    <button id="speak-btn" class="bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105">
+                        🔊 Say the Word!
+                    </button>
+                    <input type="text" id="user-input" placeholder="Type the word here..." class="p-3 w-64 rounded-xl border-2 border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg">
+                </div>
+                <button id="check-btn" class="bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105">
+                    Check Spelling
+                </button>
+            </div>
+            
+            <!-- Feedback -->
+            <div id="feedback" class="mt-6 font-bold text-2xl min-h-8"></div>
+            
+            <!-- Next Word Button -->
+            <button id="next-btn" class="hidden mt-6 bg-purple-400 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105">
+                Next Word ➡️
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Data for all spelling words
+        const spellingWords = {
+            'menu1': {
+                'week1': ['cat', 'hat', 'bat', 'fan', 'map'],
+                'week2': ['bed', 'hen', 'jet', 'net', 'ten'],
+                'week3': ['pig', 'bin', 'kit', 'lip', 'sit'],
+                'week4': ['dog', 'fox', 'pot', 'log', 'top'],
+                'week5': ['bug', 'cup', 'run', 'sun', 'tub']
+            },
+            'menu2': {
+                'week1': ['cake', 'make', 'game', 'lane', 'wave'],
+                'week2': ['feet', 'meet', 'green', 'sheep', 'tree'],
+                'week3': ['bike', 'hide', 'kite', 'five', 'time'],
+                'week4': ['bone', 'home', 'rose', 'note', 'rope'],
+                'week5': ['cube', 'flute', 'rule', 'tune', 'use']
+            },
+            'menu3': {
+                'week1': ['block', 'clap', 'flag', 'glove', 'plant'],
+                'week2': ['drum', 'frog', 'trip', 'train', 'grape'],
+                'week3': ['ship', 'chop', 'fish', 'dish', 'wish'],
+                'week4': ['three', 'that', 'with', 'whistle', 'where'],
+                'week5': ['city', 'cell', 'gem', 'giant', 'magic']
+            },
+            'menu4': {
+                'week1': ['rain', 'wait', 'play', 'stay', 'day'],
+                'week2': ['beach', 'read', 'each', 'clean', 'eat'],
+                'week3': ['boat', 'road', 'toe', 'grow', 'show'],
+                'week4': ['south', 'cloud', 'down', 'brown', 'owl'],
+                'week5': ['point', 'join', 'noise', 'toy', 'boy']
+            },
+            'menu5': {
+                'week1': ['car', 'star', 'park', 'farm', 'yard'],
+                'week2': ['fork', 'sort', 'corn', 'horse', 'storm'],
+                'week3': ['her', 'fern', 'herd', 'term', 'butter'],
+                'week4': ['bird', 'girl', 'first', 'dirt', 'shirt'],
+                'week5': ['fur', 'hurt', 'burn', 'turn', 'return']
+            },
+            'menu6': {
+                'week1': ['knife', 'know', 'gnome', 'write', 'wrist'],
+                'week2': ['I\'m', 'it\'s', 'don\'t', 'can\'t', 'you\'re'],
+                'week3': ['their', 'there', 'they\'re', 'to', 'too'],
+                'week4': ['boxes', 'brushes', 'wishes', 'dishes', 'glasses'],
+                'week5': ['sunshine', 'rainbow', 'bedroom', 'lunchbox', 'popcorn']
+            }
+        };
+
+        const dropdowns = document.querySelectorAll('.menu-dropdown');
+        const spellingArea = document.getElementById('spelling-area');
+        const wordToSpellElem = document.getElementById('word-to-spell');
+        const speakBtn = document.getElementById('speak-btn');
+        const checkBtn = document.getElementById('check-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const userInput = document.getElementById('user-input');
+        const feedbackElem = document.getElementById('feedback');
+        
+        let currentWord = '';
+        let currentWordList = [];
+
+        // Function to get a random word from the current list
+        function getRandomWord() {
+            const randomIndex = Math.floor(Math.random() * currentWordList.length);
+            return currentWordList[randomIndex];
+        }
+
+        // Function to update the spelling word
+        function updateWord() {
+            if (currentWordList.length > 0) {
+                spellingArea.classList.remove('hidden');
+                currentWord = getRandomWord();
+                wordToSpellElem.textContent = 'Spell: ' + currentWord;
+                userInput.value = '';
+                feedbackElem.textContent = '';
+                checkBtn.disabled = false;
+                nextBtn.classList.add('hidden');
+                speakBtn.classList.remove('hidden');
+                userInput.focus();
+            } else {
+                spellingArea.classList.add('hidden');
+            }
+        }
+
+        // Function to handle dropdown changes
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('change', (event) => {
+                // Reset other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== event.target) {
+                        otherDropdown.value = '';
+                    }
+                });
+
+                const menuId = event.target.id;
+                const weekId = event.target.value;
+
+                if (weekId) {
+                    currentWordList = spellingWords[menuId][weekId];
+                    updateWord();
+                } else {
+                    currentWordList = [];
+                    spellingArea.classList.add('hidden');
+                }
+            });
+        });
+
+        // Function to check the user's spelling
+        checkBtn.addEventListener('click', () => {
+            const userSpelling = userInput.value.trim().toLowerCase();
+            const correctSpelling = currentWord.toLowerCase();
+            
+            checkBtn.disabled = true;
+
+            if (userSpelling === correctSpelling) {
+                feedbackElem.innerHTML = `<span class="text-green-500">🎉 Great job! You spelled it correctly! 🎉</span>`;
+                nextBtn.classList.remove('hidden');
+            } else {
+                feedbackElem.innerHTML = `<span class="text-red-500">Oops, try again! The correct spelling is: <span class="font-mono text-purple-700 font-bold">${currentWord}</span></span>`;
+                checkBtn.disabled = false;
+            }
+        });
+        
+        // Function to move to the next word
+        nextBtn.addEventListener('click', () => {
+            updateWord();
+        });
+
+        // Function to speak the word using SpeechSynthesisUtterance
+        speakBtn.addEventListener('click', () => {
+            if (currentWord) {
+                const utterance = new SpeechSynthesisUtterance(currentWord);
+                window.speechSynthesis.speak(utterance);
+            }
+        });
+    </script>
+</body>
+</html>
